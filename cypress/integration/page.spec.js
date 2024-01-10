@@ -77,7 +77,7 @@ describe('', () => {
       page.products().eq(0)
         .byDataCy('ProductUser')
         .should('have.text', 'Roma')
-        .and('have.class', 'has-text-link')
+        .and('have.class', 'has-text-link');
 
       page.products().eq(1)
         .byDataCy('ProductUser')
@@ -298,7 +298,7 @@ describe('', () => {
   });
 
   // Categories tests are skiped by default
-  describe.skip('Filter by categories', () => {
+  describe('Filter by categories', () => {
     it('should have All Categories Button active by default', () => {
       categoriesFilter.allButton().should('not.have.class', 'is-outlined');
     });
